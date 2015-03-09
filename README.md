@@ -1,2 +1,3 @@
-# vanilla-slider
-A simple slider written in pure JS
+# Vanilla Slider
+A simple slider written in pure JS.
+It uses CSS transitions for animations.
