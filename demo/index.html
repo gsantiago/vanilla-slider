@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla Slider Demo</title>
+
+  <style>
+    .container {
+      width: 1000px;
+      margin: 100px auto;
+      font-family: sans-serif;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+      border: 1px dashed blue;
+
+      margin-bottom: 100px;
+    }
+
+    .slider ul {
+      list-style: outside none;
+      padding: 0;
+      margin: 0;
+      width: 10000%;
+      position: relative;
+      top: 0;
+      right: 0;
+      transition: all 0.6s ease;
+    }
+
+    .slider li {
+      float: left;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #888;
+      color: #fff;
+      text-align: center;
+      line-height: 200px;
+      font-size: 32px;
+    }
+
+
+
+    .vertical-slider {
+      width: 300px;
+      height: 400px;
+      border: 1px solid orange;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vertical-slider ul {
+      list-style: outside none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      top: 0;
+      right: 0;
+      transition: all 0.6s ease;
+    }
+
+    .box-vertical {
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: #b786ef;
+      color: #fff;
+      text-align: center;
+      font-size: 28px;
+    }
+
+
+    .single {
+      width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 100px;
+    }
+
+    .single ul {
+      list-style: outside none;
+      width: 10000%;
+      position: relative;
+      top: 0;
+      right: 0;
+      transition: all 0.6s ease;
+      padding: 0;
+      margin: 0;
+    }
+
+    .single li {
+      float: left;
+    }
+
+    .single-box {
+      background-color: #22c3bc;
+      width: 500px;
+      height: 300px;
+      text-align: center;
+      line-height: 300px;
+      font-size: 50px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+
+    <h1>Single Slider</h1>
+    <a href="#" class="s-prev">Prev</a>
+    <a href="#" class="s-next">Next</a>
+    <br>
+    <br>
+    <div class="single">
+      <ul>
+        <li>
+          <div class="single-box">1</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #666">2</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #e20404">3</div>
+        </li>
+        <li>
+          <div class="single-box">4</div>
+        </li>
+        <li>
+          <div class="single-box">5</div>
+        </li>
+        <li>
+          <div class="single-box">6</div>
+        </li>
+        <li>
+          <div class="single-box">7</div>
+        </li>
+        <li>
+          <div class="single-box">8</div>
+        </li>
+      </ul>
+    </div>
+
+    <h1>Horizontal Carousel</h1>
+    <a href="#" class="prev">Prev</a>
+    <a href="#" class="next">Next</a>
+    <br>
+    <br>
+    <div class="slider">
+      <ul>
+        <li>
+          <div class="box">1</div>
+        </li>
+        <li>
+          <div class="box">2</div>
+        </li>
+        <li>
+          <div class="box">3</div>
+        </li>
+        <li>
+          <div class="box">4</div>
+        </li>
+        <li>
+          <div class="box">5</div>
+        </li>
+        <li>
+          <div class="box">6</div>
+        </li>
+        <li>
+          <div class="box">7</div>
+        </li>
+        <li>
+          <div class="box">8</div>
+        </li>
+      </ul>
+    </div>
+
+    <h1>Vertical Carousel</h1>
+    <a href="#" class="v-prev">Prev</a>
+    <a href="#" class="v-next">Next</a>
+    <br>
+    <br>
+    <div class="vertical-slider">
+      <ul>
+        <li>
+          <div class="box-vertical">1</div>
+        </li>
+        <li>
+          <div class="box-vertical">2</div>
+        </li>
+        <li>
+          <div class="box-vertical">3</div>
+        </li>
+        <li>
+          <div class="box-vertical">4</div>
+        </li>
+        <li>
+          <div class="box-vertical">5</div>
+        </li>
+        <li>
+          <div class="box-vertical">6</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../vanilla-slider.js"></script>
+  <script>
+
+    var slider = new Slider('.slider', {
+      visibles: 4,
+      controlNext: '.next',
+      controlPrev: '.prev'
+    });
+
+    var verticalSlider = new Slider('.vertical-slider', {
+      direction: 'vertical',
+      visibles: 3,
+      controlNext: '.v-next',
+      controlPrev: '.v-prev'
+    })
+
+    var single = new Slider('.single', {
+      controlNext: '.s-next',
+      controlPrev: '.s-prev'
+    })
+  </script>
+</body>
+</html>
