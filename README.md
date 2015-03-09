@@ -41,3 +41,33 @@ var options = {
 };
 ```
 
+## CSS
+This slider requires a minimal CSS to work:
+
+```css
+.slider {
+  width: 1000px; /* Define the slider's width */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider ul {
+  width: 10000%;
+  position: relative;
+  top: 0;
+  right: 0;
+  
+  /* Define the transition for the animation */
+  transition: all 0.6s ease;
+  
+  /* If you are using a <ul>, reset its default styles */
+  list-style: outside none;
+  padding: 0;
+  margin: 0;
+}
+
+.slider li {
+  /* Float only for HORIZONTAL direction */
+  float: left;
+}
+```
