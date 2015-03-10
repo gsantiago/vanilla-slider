@@ -76,7 +76,7 @@
     }
 
 
-    .single {
+    .single, .single-vertical {
       width: 500px;
       height: 300px;
       margin: 0 auto;
@@ -85,7 +85,7 @@
       margin-bottom: 100px;
     }
 
-    .single ul {
+    .single ul, .single-vertical ul {
       list-style: outside none;
       width: 10000%;
       position: relative;
@@ -132,19 +132,52 @@
           <div class="single-box" style="background-color: #e20404">3</div>
         </li>
         <li>
-          <div class="single-box">4</div>
+          <div class="single-box" style="background-color: #1f8e8e">4</div>
         </li>
         <li>
-          <div class="single-box">5</div>
+          <div class="single-box" style="background-color: #e2e200">5</div>
         </li>
         <li>
-          <div class="single-box">6</div>
+          <div class="single-box" style="background-color: #e200d1">6</div>
         </li>
         <li>
-          <div class="single-box">7</div>
+          <div class="single-box" style="background-color: #07803a">7</div>
         </li>
         <li>
-          <div class="single-box">8</div>
+          <div class="single-box" style="background-color: #606011">8</div>
+        </li>
+      </ul>
+    </div>
+
+
+    <h1>Vertical Single Slider</h1>
+    <a href class="sv-prev">Prev</a>
+    <a href class="sv-next">Next</a>
+    <div class="single-vertical">
+      <ul>
+        <li>
+          <div class="single-box">1</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #666">2</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #e20404">3</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #1f8e8e">4</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #e2e200">5</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #e200d1">6</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #07803a">7</div>
+        </li>
+        <li>
+          <div class="single-box" style="background-color: #606011">8</div>
         </li>
       </ul>
     </div>
@@ -231,7 +264,13 @@
     var single = new Slider('.single', {
       controlNext: '.s-next',
       controlPrev: '.s-prev'
-    })
+    });
+
+    var singleVertical = Slider('.single-vertical', {
+      controlNext: '.sv-next',
+      controlPrev: '.sv-prev',
+      direction: 'vertical'
+    });
   </script>
 </body>
 </html>
